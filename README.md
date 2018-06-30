@@ -319,3 +319,14 @@ In order to run the project, make sure to build and then start the server.
 `npm start`
 
 Navigate to `localhost:8080` and you will be able to see your app running!
+
+# Adding React components
+
+Usually frontend code is not build in one big file, but we are encouraged to use components and break the code into logical sections.
+
+You can observe the changes in the index.tsx file, where I added the `App.tsx` which is a React component.
+
+`App.tsx` uses `SimpleComponent.tsx` as an example.
+
+# You are now ready to go! 
+
