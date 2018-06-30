@@ -4,6 +4,11 @@ Welcome to my "Get Started" series!
 
 In this repository I am going to build the minimum settings to get started with TypeScript, Express and React.
 
+My motivation for this repository is to understand how the most basic things are being setup. I know today we have plenty of projects we can just npm install, and would work without any kind of problem. When I install a bunch of stuff, if something doe not work as expected I usually feel I need to dig in to much, so I decided to create this together with all the problems I run into, this way I and other learn how to deal with those annoying installation problems.
+Another point is that most of us really setup a project once in a while, and then we forget those really simple stuff.
+
+Feedback is welcome, and other kind of problems are welcome to be documented.
+
 # Getting started
 
 `npm init` - This will create package.json file which is very important for any JS project. Just accept all the defaults, and we will change them later.
@@ -329,4 +334,6 @@ You can observe the changes in the index.tsx file, where I added the `App.tsx` w
 `App.tsx` uses `SimpleComponent.tsx` as an example.
 
 # You are now ready to go! 
+
+As usual big thanks to https://www.typescriptlang.org/docs/handbook/react-&-webpack.html for making this post! I always use it as my base for setting up a TypeScript & React project.
 
