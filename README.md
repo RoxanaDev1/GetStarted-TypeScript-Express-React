@@ -32,8 +32,11 @@ Every project should have a set project structure. Project structure might seem 
 Here is a general project structure, which I like using:
 
 `mkdir src` - One folder where all the code we will write will be included in. 
+
 `cd src` 
+
 `mkdir server` - Folder for all the server code.
+
 `mkdir client` - Folder for all the client/frontend code.
 
 This is a general preference, and the reasoning behind it is that from looking at the structure we understand instantly more or less how the project works.
@@ -49,7 +52,9 @@ More info: https://www.npmjs.com/package/ts-node
 `npm install express @types/express` - Install express and types for express as we are running a typescript application. Notice the changes in package.json.
 
 `cd src`
+
 `cd server`
+
 `touch server.ts`
 
 ### Building the server file:
