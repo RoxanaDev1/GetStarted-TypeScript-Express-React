@@ -8,7 +8,7 @@ In this repository I am going to build the minimum settings to get started with 
 
 `npm init` - This will create package.json file which is very important for any JS project. Just accept all the defaults, and we will change them later.
 
-`touch .gitignore` - This will create a file in the directory, where we will tell git what changes we will not be commiting. Usually we will gitignore folders like node_modules, where all the dependencies are being installed. As preparation, add the following to .gitignore:
+`touch .gitignore` - This will create a file in the directory, where we will tell git what changes we will not be committing. Usually we will gitignore folders like node_modules, where all the dependencies are being installed. As preparation, add the following to .gitignore:
 
 ```
 node_modules
@@ -102,3 +102,69 @@ Check the spelling of the name, or if a path was included, verify that the path 
 At line:1 char:1
 + ts-node src/server/server.ts
 ```
+
+# Build the frontend using React
+React is one of the more popular frontend frameworks. The main benefit with React is the way we arrange the code in components and communicate between them. One more benefit with React is the fact that not all components would update every time the UI changes, but only the ones which need change.
+Short explanation: https://www.codecademy.com/articles/react-virtual-dom
+
+Install the following react libs including their types:
+
+`npm install react @types/react` 
+
+`npm install react-dom @types/react-dom`
+
+Navigate to the client lib:
+
+`cd src`
+
+`cd client`
+
+`touch index.html`
+
+The index.html file is the entry point for the project, it is the initial html which is used for the whole client code. The html file is very small, and all the frontend components would be attached to one element in the html called "appContainer" - or any similar name.
+
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Hello World - Frontend</title>
+    </head>
+    <body>
+        <div id="appContainer"></div>
+    </body>
+</html>
+```
+
+`touch index.tsx`
+
+The index.tsx will be the entry point for react to attach its elements to the html. The file ending must be `.tsx` as it will render some content into the page, similarly with JS where `.jsx` is used. 
+
+```
+import * as React  from "react";
+import * as ReactDOM from "react-dom";
+
+ReactDOM.render(
+   <div>"Hello World - Frontend"</div>,
+    document.getElementById("appContainer")
+);
+```
+
+At this point some modifications should be made to the project configuration. We will fix them one by one under possible hickups.
+
+### Possible hickups
+
+When creating the index.tsx, the div element would have the following error:
+
+```
+[ts] Cannot use JSX unless the '--jsx' flag is provided.
+```
+
+The cause is due to the fact that our tsconfig has no jsx flag.
+Update the `tsconfig.json` file with the following under compile options:
+The error would go away, as we have told have setup react as the framework to render jsx.
+
+`"jsx": "react"`
+
+In this section we will not run anything for now, as we would like the server to load our frontend, or as we say: serve it.
+
