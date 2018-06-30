@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/RoxanaDev1/GetStarted-TypeScript-Express-React/issues"
   },
-  "homepage": "https://github.com/RoxanaDev1/GetStarted-TypeScript-Express-React#readme"
+  "homepage": "https://github.com/RoxanaDev1/GetStarted-TypeScript-Express-React#readme",
+  "devDependencies": {
+    "typescript": "^2.9.2"
+  }
 }
