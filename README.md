@@ -9,6 +9,16 @@ Another point is that most of us really setup a project once in a while, and the
 
 Feedback is welcome, and other kind of problems are welcome to be documented.
 
+# TL;DR
+
+This repository can be also cloned and ran with the following:
+
+`npm install`
+
+`npm run build`
+
+`npm start`
+
 # Getting started
 
 `npm init` - This will create package.json file which is very important for any JS project. Just accept all the defaults, and we will change them later.
