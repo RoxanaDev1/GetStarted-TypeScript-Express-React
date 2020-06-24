@@ -1,11 +1,11 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const CLINET_DIR = path.join(__dirname, "./src/client");
+const CLIENT_DIR = path.join(__dirname, "./src/client");
 const BUILD_DIR = path.join(__dirname, "./src/build");
 
 module.exports = {
-    entry: path.join(CLINET_DIR, "index.tsx"), //Define the entry point for the project
+    entry: path.join(CLIENT_DIR, "index.tsx"), //Define the entry point for the project
     output: {   //Define where the compliation package would be placed
         filename: "bundle.js",
         path: BUILD_DIR
@@ -32,7 +32,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'My first React app',
-            template: path.join(CLINET_DIR, "index.html")
+            template: path.join(CLIENT_DIR, "index.html")
           })
     ]
 };
