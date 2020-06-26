@@ -201,19 +201,21 @@ From project root, create the following file:
 
 `touch webpack.config.js` - This file is used to define webpack how to build the project.
 
-```
+```js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const CLINET_DIR = path.join(__dirname, "./src/client");
+const CLIENT_DIR = path.join(__dirname, "./src/client");
 const BUILD_DIR = path.join(__dirname, "./src/build");
 
 module.exports = {
-    entry: path.join(CLINET_DIR, "index.tsx"), //Define the entry point for the project
+    entry: path.join(CLIENT_DIR, "index.tsx"), //Define the entry point for the project
     output: {   //Define where the compliation package would be placed
         filename: "bundle.js",
         path: BUILD_DIR
     },
+    
+    mode: "production",
 
     // Enable sourcemaps for debugging webpack's output.
     // http://blog.teamtreehouse.com/introduction-source-maps
@@ -236,7 +238,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'My first React app',
-            template: path.join(CLINET_DIR, "index.html")
+            template: path.join(CLIENT_DIR, "index.html")
           })
     ]
 };
@@ -275,7 +277,7 @@ Run `webpck` command again, If everything went well, the build folder should now
 
 In the `package.json` file, add the following under `scripts` section:
 `"build": "webpack"`
-Keep in mind this is a .json file, so don't forget the comma after, if it is not the last commnd in scripts section.
+Keep in mind this is a .json file, so don't forget the comma after, if it is not the last command in scripts section.
 
 `npm run build` - Executing this command in the terminal would build the bundle.
 
