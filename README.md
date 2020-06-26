@@ -275,7 +275,7 @@ Run `webpck` command again, If everything went well, the build folder should now
 
 In the `package.json` file, add the following under `scripts` section:
 `"build": "webpack"`
-Keep in mind this is a .json file, so don't forget the comma after, if it is not the last commnd in scripts section.
+Keep in mind this is a .json file, so don't forget the comma after, if it is not the last command in scripts section.
 
 `npm run build` - Executing this command in the terminal would build the bundle.
 
