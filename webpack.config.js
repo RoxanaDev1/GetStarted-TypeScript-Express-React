@@ -10,6 +10,8 @@ module.exports = {
         filename: "bundle.js",
         path: BUILD_DIR
     },
+    
+    mode: "production",
 
     // Enable sourcemaps for debugging webpack's output.
     // http://blog.teamtreehouse.com/introduction-source-maps
