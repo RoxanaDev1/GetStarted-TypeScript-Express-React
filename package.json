@@ -20,7 +20,7 @@
   "homepage": "https://github.com/RoxanaDev1/GetStarted-TypeScript-Express-React#readme",
   "devDependencies": {
     "awesome-typescript-loader": "^5.2.1",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^5.5.0",
     "source-map-loader": "^0.2.4",
     "ts-node": "^7.0.0",
     "typescript": "^3.9.5",
